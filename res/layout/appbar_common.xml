@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layoutDirection="locale" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="140.0dip" android:layout_height="50.0dip" android:src="@drawable/logo_white_long" android:layoutDirection="locale" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:text="fdsfdffa" android:textDirection="locale" android:layoutDirection="locale" android:layout_toEndOf="@id/logo" />
+    <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" android:layoutDirection="locale" android:layout_marginStart="15.0dip" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:textDirection="locale" android:layoutDirection="locale" android:layout_alignParentEnd="true" />
+</RelativeLayout>

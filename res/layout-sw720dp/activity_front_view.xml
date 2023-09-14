@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_to_hide" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip">
+        <LinearLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layoutDirection="locale" android:layout_marginEnd="15.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_back_button" android:background="@drawable/blur_lens_selector" android:layout_width="65.0dip" android:layout_height="fill_parent" android:src="@drawable/hp_arrow_back" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+            <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="42.0dip" android:src="@drawable/logo_white_long" android:layout_toEndOf="@id/iv_back_button" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:text="|" android:textDirection="locale" android:layout_toEndOf="@id/logo" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/live_sky" android:textDirection="locale" android:layout_marginStart="5.0dip" android:layout_toEndOf="@id/separator" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:textDirection="locale" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:textDirection="locale" android:paddingEnd="30.0sp" android:layout_alignParentEnd="true" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginStart="220.0dip" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="This is dummy text" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/imageview_image" android:background="@color/black" android:layout_width="200.0dip" android:layout_height="150.0dip" android:layout_marginTop="50.0dip" android:layout_marginStart="20.0dip">
+            <VideoView android:id="@id/video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

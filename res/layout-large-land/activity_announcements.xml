@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_goneMarginTop="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+        <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="50.0dip" android:src="@drawable/logo_white_long" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_toEndOf="@id/logo" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/notification" android:layout_marginStart="10.0dip" android:layout_toEndOf="@id/separator" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="7.0dip" android:paddingEnd="30.0sp" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/my_recycler_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="40.0dip" android:layout_below="@id/rl_settings" />
+    <ProgressBar android:id="@id/pb_paging_loader" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_centerInParent="true" style="?android:progressBarStyleSmall" />
+    <TextView android:textSize="30.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/no_record" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_record_found" android:layout_centerVertical="true" android:fontFamily="@string/font_family_thin" android:paddingStart="40.0dip" android:paddingEnd="40.0dip" />
+</RelativeLayout>

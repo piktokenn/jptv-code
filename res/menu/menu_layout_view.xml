@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/layout_view_grid" android:visible="true" android:title="@string/view_grid" />
+    <item android:id="@id/layout_view_linear" android:visible="true" android:title="@string/view_Linear" />
+</menu>

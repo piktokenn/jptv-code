@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_outer" android:background="@drawable/selector_list_multidns" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_margin="8.0dip" android:weightSum="8.0" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:background="#84000000" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_weight="2.0" android:layoutDirection="locale" android:layout_marginStart="5.0dip" app:srcCompat="@drawable/ic_myservice" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="4.0" android:layout_weight="5.0" android:layoutDirection="locale">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="Title" android:maxLines="1" android:layout_weight="1.5" android:layoutDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layoutDirection="locale">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Pricing :" android:textDirection="locale" android:layoutDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/tv_pricing" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="$0000" android:textDirection="locale" android:layoutDirection="locale" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layoutDirection="locale">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Next Due Date :" android:textDirection="locale" android:layoutDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/tv_next_due_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="$0000" android:textDirection="locale" android:layoutDirection="locale" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/forward_arrow" android:layout_weight="1.0" android:layoutDirection="locale" />
+</LinearLayout>

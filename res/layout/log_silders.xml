@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/logOptionsLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <de.blinkt.openvpn.VPNviews.SeekBarTicks android:id="@id/LogLevelSlider" android:layout_width="300.0dip" android:layout_height="wrap_content" android:indeterminate="false" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RadioGroup android:orientation="horizontal" android:id="@id/timeFormatRadioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/radioNone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RadioButton android:id="@id/radioShort" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RadioButton android:id="@id/radioISO" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RadioGroup>
+    <CheckBox android:id="@id/clearlogconnect" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

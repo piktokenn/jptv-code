@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_outer" android:background="@drawable/selector_list_multidns" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" android:layoutDirection="locale" android:layout_marginStart="20.0dip" android:layout_marginEnd="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="85.0dip" android:baselineAligned="false" android:weightSum="1.0" android:layoutDirection="locale">
+        <RelativeLayout android:id="@id/testing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.1" android:layoutDirection="locale">
+            <RelativeLayout android:id="@id/rl_list_of_categories" android:layout_width="fill_parent" android:layout_height="79.0dip" android:layoutDirection="locale">
+                <LinearLayout android:gravity="center" android:id="@id/iv_tv_icon" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layoutDirection="locale" android:layout_marginStart="13.0dip">
+                    <ImageView android:layout_gravity="center" android:id="@id/iv_profile_image" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" app:srcCompat="@drawable/new_user_img" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_user_server_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale" android:layout_marginStart="0.0dip" android:layout_marginEnd="0.0dip" android:layout_toEndOf="@id/iv_tv_icon">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layoutDirection="locale" android:layout_marginStart="15.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="#ff051631" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_profile_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Server Name" android:maxLines="1" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="@string/font_family_regular" android:textDirection="locale" android:layout_marginEnd="20.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

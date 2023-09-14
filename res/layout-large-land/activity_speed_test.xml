@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+        <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="42.0dip" android:src="@drawable/logo_white_long" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="|" android:layout_toEndOf="@id/logo" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/settings_small" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator_second" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="|" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/textView" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView_second" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/speed_test" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator_second" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="#9f1d252e" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="20.0dip" android:weightSum="3.0" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="3.0" android:layout_weight="2.0">
+            <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="15.0dip" android:layout_weight="2.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/main" />
+                <ImageView android:id="@id/bar_speed" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bar" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.9">
+                <Button android:textSize="20.0sp" android:textColor="@android:color/background_light" android:id="@id/test_button" android:tag="1" android:background="@drawable/black_button_dark" android:focusable="true" android:layout_width="200.0dip" android:layout_height="70.0dip" android:text="@string/button_test" android:shadowRadius="15.0" android:textAllCaps="false" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/graph_chart" android:background="#ff1d252e" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="3.0" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="1.0">
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/ticket_box_end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/ping" android:layout_weight="0.6" android:textAllCaps="true" />
+                <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@color/invoice_box_start" android:gravity="center" android:id="@id/ping_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/ping_speed" android:layout_weight="0.5" android:textAllCaps="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ping" android:background="#ff1d252e" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="2.0dip" android:weightSum="3.0" android:layout_weight="2.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="1.0">
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/ticket_box_end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/downloaded_data" android:layout_weight="0.6" android:textAllCaps="true" />
+                <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@color/invoice_box_start" android:gravity="center" android:id="@id/down_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/ping_speed" android:layout_weight="0.5" android:textAllCaps="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/download" android:background="#ff1d252e" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="2.0dip" android:weightSum="3.0" android:layout_weight="2.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="1.0" android:layout_marginEnd="5.0dip">
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/ticket_box_end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/upload" android:layout_weight="0.6" android:textAllCaps="true" />
+                <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@color/invoice_box_start" android:gravity="center" android:id="@id/upl_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/ping_speed" android:layout_weight="0.5" android:textAllCaps="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/upload" android:background="#ff1d252e" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="2.0dip" android:weightSum="3.0" android:layout_weight="2.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:text="@string/uploaded_data" style="@style/logWindowStatusTitle" />
+    <TextView android:id="@id/speedUp" style="@style/logWindowStatusText" />
+    <TextView android:text="@string/downloaded_data" style="@style/logWindowStatusTitle" />
+    <TextView android:id="@id/speedDown" style="@style/logWindowStatusText" />
+    <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:text="@string/vpn_status" style="@style/logWindowStatusTitle" />
+    <TextView android:id="@id/speedStatus" style="@style/logWindowStatusText" />
+</merge>

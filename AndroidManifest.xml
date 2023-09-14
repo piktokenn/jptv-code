@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" package="com.dinoott.dinoottiptvbox" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415">
+    <queries>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <permission android:name="com.dinoott.dinoottiptvbox.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.dinoott.dinoottiptvbox.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="false" android:allowNativeHeapPointerTagging="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@mipmap/tv_banner" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.dinoott.dinoottiptvbox.miscelleneious.MyApplication" android:networkSecurityConfig="@xml/nsc_mitm" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:exported="false" android:name="com.dinoott.dinoottiptvbox.CodeEpisodeDetailActivity"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.Local_media_Activity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.AudioPickActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VideoPickActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SpeedTestActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.MultiSettingActivity" android:screenOrientation="sensorLandscape"/>
+        <provider android:authorities="com.dinoott.dinoottiptvbox.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.dinoott.dinoottiptvbox.miscelleneious.VedioFile">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_path"/>
+        </provider>
+        <provider android:authorities="com.dinoott.dinoottiptvbox.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.AddedExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:exported="true" android:name="com.dinoott.dinoottiptvbox.view.activity.SplashActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.LoginActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ParentalControlActivitity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.NewDashboardActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.AccountInfoActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.PlayerSelectionActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ImportEPGActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.NewEPGActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.NewEPGCategoriesActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ViewDetailsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ViewDetailsCastActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.PlayRecordingExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.StreamFormatActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.TVArchiveActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SubTVArchiveActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VodActivityNewFlowSubCategories" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VodActivityNewFlowSecondSubCategories" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.LiveActivityNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.TVArchiveActivityNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.TVArchiveActivityLayout" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.TimeFormatActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.CodeEpisodeDetailActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.EPGChannelUpdateActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VodActivityNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VodActivityLayout" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.AutomationActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesActivtyNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesActivitNewFlowSubCat" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.GeneralSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.dinoott.dinoottiptvbox.view.activity.BootStartupActivity" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.YouTubePlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:excludeFromRecents="true" android:name="com.dinoott.dinoottiptvbox.view.activity.NotificationActivity" android:screenOrientation="sensorLandscape" android:taskAffinity=""/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.RecordingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VLCPlayerRecordingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.MxPlayerRecordingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.AnnouncementsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.AnnouncementAlertActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.dinoott.dinoottiptvbox.view.ijkplayer.activities.NSTIJKPlayerSkyActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.ijkplayer.activities.NSTIJKPlayerVODActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.ijkplayer.activities.NSTIJKPlayerEPGActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.PlayerSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.CheckAppupdateActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.RateUsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.FreeTrailActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.dinoott.dinoottiptvbox.view.activity.ImportM3uActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="redirect_live_tv"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="redirect_vod"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.RoutingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.LoginM3uActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:exported="true" android:name="com.dinoott.dinoottiptvbox.view.activity.MultiUserActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="m3u"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="api"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ViewDetailsTMDBActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesDetailM3UActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesActivityNewFlowSubCategoriesM3U" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesActivityNewFlowM3U" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.PlayExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.ServicesDashboardActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.MySerivcesActiviy" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.MyTicketActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.MyInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.ViewTicketActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.PaidInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.UnpiadInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.CancelInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.InvoiceRefundedActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.ActiveServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.CancelledSerivceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.PendingServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.SuspendedServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.TerminatedServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.FraudServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.ShowserviceInformationActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.OpenTicketActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.InvoicePaidDetailActivity" android:screenOrientation="sensorLandscape"/>
+        <service android:exported="true" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/default_notification_channel_id"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.WHMCSClientapp.activities.BuyNowActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.dinoott.dinoottiptvbox.miscelleneious.chromecastfeature.ExpandedControlsActivity" android:screenOrientation="sensorLandscape" android:theme="@style/ChromecastTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dinoott.dinoottiptvbox.view.activity.NewDashboardActivity"/>
+        </activity>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.dinoott.dinoottiptvbox.miscelleneious.chromecastfeature.CastOptionsProvider"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.ijkplayer.activities.NSTIJKPlayerMultiActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.vpn.activities.ProfileActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.vpn.activities.ImportVPNActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:launchMode="singleTop" android:name="de.blinkt.openvpn.LaunchVPN" android:screenOrientation="sensorLandscape"/>
+        <service android:exported="true" android:name="de.blinkt.openvpn.core.OpenVPNService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="de.blinkt.openvpn.core.OpenVPNStatusService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="de.blinkt.openvpn.api.ExternalOpenVPNService" android:permission="android.permission.BIND_VPN_SERVICE" android:process=":openvpn">
+            <intent-filter>
+                <action android:name="de.blinkt.openvpn.api.IOpenVPNAPIService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/qs_title" android:name="de.blinkt.openvpn.OpenVPNTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:value="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="false"/>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.vpn.LogWindow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.vpn.DisconnectVPN" android:screenOrientation="sensorLandscape"/>
+        <activity android:name="de.blinkt.openvpn.api.RemoteAction"/>
+        <activity-alias android:exported="true" android:name="de.blinkt.openvpn.api.ConnectVPN" android:targetActivity="de.blinkt.openvpn.api.RemoteAction"/>
+        <activity android:exported="true" android:name="de.blinkt.openvpn.api.GrantPermissionsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="de.blinkt.openvpn.api.ConfirmDialog">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesDetailActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.dinoott.dinoottiptvbox.view.activity.HoneyPlayer" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.miscelleneious.chromecastfeature.queue.QueueListViewActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SeriesAllDataSingleActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.VodAllDataSingleActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.LiveAllDataSingleActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:name="com.dinoott.dinoottiptvbox.view.ijkplayer.activities.NSTIJKPlayerSkyTvActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SearchActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.FrontView" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.EPGSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.SearchActivityLowerSDK" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ScreenTypeActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ScreenTypeSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.BackupAndRestoreActivity" android:screenOrientation="sensorLandscape"/>
+        <service android:name="com.dinoott.dinoottiptvbox.miscelleneious.chromecastfeature.castserver.CastServerService"/>
+        <service android:name="com.dinoott.dinoottiptvbox.miscelleneious.StopProcessingTasksService" android:stopWithTask="false"/>
+        <activity android:configChanges="keyboardHidden" android:exported="true" android:name="com.dinoott.dinoottiptvbox.view.demo.SampleChooserActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.exolist\\.json"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:name="com.dinoott.dinoottiptvbox.view.demo.PlayerActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.dinoott.dinoottiptvbox.view.activity.ExoPlayerMoviesSeriesActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.dinoott.dinoottiptvbox.view.demo.NSTEXOPlayerSkyActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.dinoott.dinoottiptvbox.view.demo.NSTEXOPlayerSkyTvActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+        <receiver android:exported="true" android:name="com.onesignal.FCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter android:priority="999">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.dinoott.dinoottiptvbox"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.onesignal.HmsMessageServiceOneSignal">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="true" android:name="com.onesignal.NotificationOpenedActivityHMS" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.onesignal.FCMIntentService"/>
+        <service android:exported="false" android:name="com.onesignal.FCMIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.onesignal.SyncService" android:stopWithTask="true"/>
+        <service android:exported="false" android:name="com.onesignal.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.onesignal.PermissionsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.onesignal.NotificationDismissReceiver"/>
+        <receiver android:exported="true" android:name="com.onesignal.BootUpReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.onesignal.UpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.onesignal.NotificationOpenedReceiver" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
+        <service android:enabled="true" android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"/>
+        <activity android:name="com.amplifyframework.devmenu.DeveloperMenuActivity" android:theme="@style/OverlayActivity"/>
+        <receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="com.dinoott.dinoottiptvbox.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.dinoott.dinoottiptvbox.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.dinoott.dinoottiptvbox.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.amazonaws.mobileconnectors.cognitoauth.activities.CustomTabsManagerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="10901"/>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"/>
+    </application>
+</manifest>

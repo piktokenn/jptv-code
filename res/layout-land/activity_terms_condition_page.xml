@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0sp" android:text="License Agreement" android:layout_weight="5.0" android:textAllCaps="true" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_warning" android:background="@color/darker_grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/warning_message" android:layout_weight="5.0" />
+        </LinearLayout>
+        <View android:background="@color/Grey_100" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <ScrollView android:background="@color/white" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fadeScrollbars="false">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="2.0" android:layout_below="@id/webview">
+                    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/rl_accept" android:tag="rl_accept" android:background="@drawable/box_focused" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="55.0dip" android:layout_weight="1.0">
+                        <ImageView android:id="@id/iv_connect_vpn" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/white_check" android:layout_marginStart="15.0dip" />
+                        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="start" android:id="@id/tv_vpn_con" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accept" android:singleLine="true" android:textAllCaps="true" android:layout_marginStart="4.0dip" android:layout_marginEnd="2.0dip" android:layout_toEndOf="@id/iv_connect_vpn" />
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/rl_cancel" android:tag="rl_cancel" android:background="@drawable/black_button_dark" android:visibility="gone" android:nextFocusRight="@id/rl_bt_submit" android:layout_width="0.0dip" android:layout_height="55.0dip" android:layout_weight="1.0">
+                        <ImageView android:id="@id/iv_list_users" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/white_cross" android:layout_marginStart="15.0dip" />
+                        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="start" android:id="@id/tv_list_users" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:singleLine="true" android:textAllCaps="true" android:layout_marginStart="4.0dip" android:layout_marginEnd="2.0dip" android:layout_toEndOf="@id/iv_list_users" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/hp_cyan"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="0.5dip">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#ff1b1a1a" />
+                </shape>
+            </item>
+            <item android:bottom="1.0dip">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/cat_left_background" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</ripple>

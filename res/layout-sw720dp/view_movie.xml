@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:id="@id/surface" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/shade" android:background="@drawable/shade" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageButton android:id="@id/toggle" android:background="?android:selectableItemBackground" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/player_pause" android:layout_centerInParent="true" android:contentDescription="@string/pause" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <ImageButton android:id="@id/fast_rewind" android:background="?android:selectableItemBackground" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hp_rewind" android:layout_alignTop="@id/toggle" android:layout_toStartOf="@id/toggle" />
+    <ImageButton android:id="@id/fast_forward" android:background="?android:selectableItemBackground" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/forward_arrow" android:layout_alignTop="@id/toggle" android:layout_toEndOf="@id/toggle" />
+    <ImageButton android:id="@id/minimize" android:background="?android:selectableItemBackground" android:padding="16.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/minus_icon" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+</merge>

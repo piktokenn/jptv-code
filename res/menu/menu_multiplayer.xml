@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/nav_edit_channel" android:visible="true" android:title="@string/edit_channel" />
+    <item android:id="@id/nav_remove_channel" android:visible="true" android:title="@string/remove_channel" />
+</menu>

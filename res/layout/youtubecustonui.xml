@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/controls" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:background="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/exo_pause" android:background="@drawable/selector_checkbox" android:padding="15.0dip" android:focusable="true" android:visibility="invisible" android:layout_width="58.0dip" android:layout_height="48.0dip" android:foreground="?android:selectableItemBackground" app:srcCompat="@drawable/hplib_ic_pause" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/exo_play" android:background="@drawable/selector_checkbox" android:padding="15.0dip" android:focusable="true" android:visibility="visible" android:layout_width="58.0dip" android:layout_height="48.0dip" android:foreground="?android:selectableItemBackground" app:srcCompat="@drawable/hplib_ic_play_download" />
+    </RelativeLayout>
+</RelativeLayout>

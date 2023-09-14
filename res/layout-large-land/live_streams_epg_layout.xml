@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_main_layout" android:tag="cards main container" android:background="@drawable/selector_checkbox" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_archive_layout" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/tv_archieve_text" android:layout_gravity="left" android:id="@id/tv_channel_name" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="This is program name" android:layout_marginStart="15.0dip" />
+        <ImageView android:id="@id/iv_archive_clock" android:layout_width="17.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/tv_arch" android:layout_below="@id/tv_channel_name" android:layout_marginStart="18.0dip" />
+        <TextView android:textSize="17.0dip" android:textColor="@color/tv_archieve_text" android:layout_gravity="left" android:id="@id/tv_date_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="20:10 - 30:30" android:layout_below="@id/tv_channel_name" android:layout_marginStart="25.0dip" android:layout_alignStart="@id/iv_archive_clock" />
+        <TextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="#ff08b461" android:id="@id/tv_now_playing" android:paddingTop="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" />
+        <View android:background="#792d2a2a" android:layout_width="fill_parent" android:layout_height="0.100000024dip" />
+    </RelativeLayout>
+</LinearLayout>

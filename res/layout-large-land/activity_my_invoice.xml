@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginTop="20.0dip" android:layoutDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+        <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="fill_parent" android:src="@drawable/logo_white_long" android:layoutDirection="locale" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="|" android:textDirection="locale" android:layoutDirection="locale" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/logo" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:text="@string/my_invoices" android:textDirection="locale" android:layoutDirection="locale" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" android:layoutDirection="locale" android:layout_marginStart="15.0dip" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:textDirection="locale" android:layoutDirection="locale" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="35.0dip" android:layout_marginBottom="30.0dip" android:weightSum="2.0" android:layoutDirection="locale" android:layout_marginStart="100.0dip" android:layout_marginEnd="100.0dip">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:baselineAligned="false" android:weightSum="2.0" android:layout_weight="1.0" android:layoutDirection="locale">
+            <LinearLayout android:id="@id/paid" android:tag="1" android:background="@drawable/paid_box" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:baselineAligned="false" android:layout_weight="1.0" android:layoutDirection="locale" android:layout_marginStart="15.0dip" android:layout_marginEnd="20.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/gap_two" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.3" android:layoutDirection="locale" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="4.0" android:layout_weight="1.7" android:layoutDirection="locale">
+                    <RelativeLayout android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <ImageView android:id="@id/loader_data" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/circle" android:layoutDirection="locale" />
+                        <com.wang.avi.AVLoadingIndicatorView android:id="@id/loader_show" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:layoutDirection="locale" android:paddingStart="2.0sp" android:paddingEnd="2.0dip" app:indicatorColor="@color/paid_box_end" app:indicatorName="BallPulseSyncIndicator" />
+                        <TextView android:textSize="22.0sp" android:textColor="@color/paid_box_end" android:gravity="center" android:id="@id/sow_no" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:text="1" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/invoices_paid" android:textAllCaps="true" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.5" android:layoutDirection="locale">
+                    <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/ic_paid" android:layoutDirection="locale" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4" android:layoutDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/unpaid" android:tag="2" android:background="@drawable/un_paid_box" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:baselineAligned="false" android:layout_weight="1.0" android:layoutDirection="locale" android:layout_marginStart="25.0dip" android:layout_marginEnd="20.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/gap" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.3" android:layoutDirection="locale" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="4.0" android:layout_weight="1.7" android:layoutDirection="locale">
+                    <RelativeLayout android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <ImageView android:id="@id/loader_unpaid" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/circle" android:layoutDirection="locale" />
+                        <com.wang.avi.AVLoadingIndicatorView android:id="@id/loader_showup" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:layoutDirection="locale" android:paddingStart="2.0sp" android:paddingEnd="2.0dip" app:indicatorColor="@color/unpaid_box_end" app:indicatorName="BallPulseSyncIndicator" />
+                        <TextView android:textSize="22.0sp" android:textColor="@color/unpaid_box_end" android:gravity="center" android:id="@id/sow_up" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:text="1" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <TextView android:textSize="19.0sp" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/invoices_unpaid" android:textAllCaps="true" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.5" android:layoutDirection="locale">
+                    <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/ic_unpaid" android:layoutDirection="locale" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4" android:layoutDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="2.0" android:layout_weight="1.0" android:layoutDirection="locale">
+            <LinearLayout android:id="@id/cancel" android:tag="4" android:background="@drawable/cancel_box" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:baselineAligned="false" android:layout_weight="1.0" android:layoutDirection="locale" android:layout_marginStart="15.0dip" android:layout_marginEnd="20.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/gap4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.3" android:layoutDirection="locale" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="4.0" android:layout_weight="1.7" android:layoutDirection="locale">
+                    <RelativeLayout android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <ImageView android:id="@id/loader_cancel" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/circle" android:layoutDirection="locale" />
+                        <com.wang.avi.AVLoadingIndicatorView android:id="@id/loader_showcnl" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:layoutDirection="locale" android:paddingStart="2.0sp" android:paddingEnd="2.0dip" app:indicatorColor="@color/cannel_box_end" app:indicatorName="BallPulseSyncIndicator" />
+                        <TextView android:textSize="22.0sp" android:textColor="@color/cannel_box_end" android:gravity="center" android:id="@id/sow_cnl" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:text="1" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <TextView android:textSize="19.0sp" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/my_service_cancelled" android:textAllCaps="true" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.5" android:layoutDirection="locale">
+                    <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/ic_cencel" android:layoutDirection="locale" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4" android:layoutDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/refound" android:tag="3" android:background="@drawable/refounded_box" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:baselineAligned="false" android:layout_weight="1.0" android:layoutDirection="locale" android:layout_marginStart="25.0dip" android:layout_marginEnd="20.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/gap2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.3" android:layoutDirection="locale" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="4.0" android:layout_weight="1.7" android:layoutDirection="locale">
+                    <RelativeLayout android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <ImageView android:id="@id/loader_refound" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/circle" android:layoutDirection="locale" />
+                        <com.wang.avi.AVLoadingIndicatorView android:id="@id/loader_showrf" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:layoutDirection="locale" android:paddingStart="2.0sp" android:paddingEnd="2.0dip" app:indicatorColor="@color/refund_box_end" app:indicatorName="BallPulseSyncIndicator" />
+                        <TextView android:textSize="22.0sp" android:textColor="@color/refund_box_end" android:gravity="center" android:id="@id/sow_rf" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:layoutDirection="locale">
+                        <TextView android:textSize="19.0sp" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/refound" android:textAllCaps="true" android:textDirection="locale" android:layoutDirection="locale" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.5" android:layoutDirection="locale">
+                    <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/ic_refund" android:layoutDirection="locale" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4" android:layoutDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

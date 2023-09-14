@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditText android:textSize="18.0sp" android:textColor="#ff1d1e1e" android:textColorHint="@color/Grey_100" android:id="@id/et_search" android:background="@drawable/selector_master_search_field" android:padding="10.0dip" android:focusable="true" android:visibility="visible" android:layout_width="400.0dip" android:layout_height="60.0dip" android:layout_marginTop="2.0dip" android:hint="Search" android:inputType="text" android:imeOptions="actionSearch|flagNoExtractUi" android:textDirection="locale" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar_toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/toolbar" android:visibility="visible" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="60.0dip" android:minHeight="?actionBarSize" android:layout_centerInParent="true" local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="42.0dip" android:layout_margin="5.0dip" android:src="@drawable/logo_white_long" />
+                <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_settings" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/live_tv" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:fontFamily="@string/font_family_bold" android:paddingStart="80.0dip" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout android:id="@id/rl_settings" android:background="@color/colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:id="@id/rl_sub_cat" android:paddingBottom="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="40.0dip" android:paddingEnd="40.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:id="@id/tv_view_provider" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="gridView" />
+            <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/my_recycler_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </ScrollView>
+            <TextView android:textSize="30.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_noStream" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="@string/no_series_found" android:layout_centerHorizontal="true" android:fontFamily="@string/font_family_thin" android:textAlignment="center" />
+            <ProgressBar android:id="@id/pb_loader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:indeterminate="true" android:layout_below="@id/sliding_tabs" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="30.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_no_record_found" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="@string/no_record_found" android:layout_centerHorizontal="true" android:fontFamily="@string/font_family_thin" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>

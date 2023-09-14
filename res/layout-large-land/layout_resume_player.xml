@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/rl_password_verification" android:background="#de12161e" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" app:cardCornerRadius="10.0dip">
+            <RelativeLayout android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <RelativeLayout android:id="@id/ll_expandable" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/relative_title" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/tv_movie_id" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawablePadding="7.0dip" android:layout_centerVertical="true" android:drawableStart="@drawable/epg_selection_icon" android:fontFamily="@string/font_family_medium" android:layout_marginStart="25.0dip" android:layout_toStartOf="@id/iv_cancel" android:layout_alignParentStart="true" />
+                        <ImageView android:id="@id/iv_cancel" android:tag="15" android:focusable="true" android:visibility="visible" android:nextFocusDown="@id/bt_resume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_cancel" />
+                    </RelativeLayout>
+                    <ImageView android:id="@id/iv_div" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/relative_title" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_div">
+                        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/et_password" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/resume_player_message" android:layout_below="@id/tv_parental_password" android:fontFamily="@string/font_family_regular" android:paddingStart="10.0dip" android:layout_marginStart="25.0dip" android:layout_marginEnd="25.0dip" />
+                        <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/bt_start_over" android:tag="8" android:background="@drawable/black_button_dark" android:focusable="true" android:nextFocusLeft="@id/bt_resume" android:nextFocusRight="@id/bt_resume" android:nextFocusUp="@id/iv_cancel" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="20.0dip" android:text="@string/startover" android:layout_below="@id/et_password" android:layout_marginStart="40.0dip" />
+                        <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/bt_resume" android:tag="9" android:background="@drawable/black_button_dark" android:focusable="true" android:nextFocusLeft="@id/bt_start_over" android:nextFocusRight="@id/bt_start_over" android:nextFocusUp="@id/iv_cancel" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="20.0dip" android:text="@string/resume" android:layout_below="@id/et_password" android:layout_marginEnd="40.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

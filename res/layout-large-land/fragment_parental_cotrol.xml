@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fl_invoices" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="50.0dip" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+        <RelativeLayout android:id="@id/rl_my_invoices" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rl_invoices" android:background="@color/epg_event_layout_background_selected" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_line" android:background="@drawable/line_light_gray_small" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                <ImageView android:id="@id/iv_back_press" android:background="?selectableItemBackgroundBorderless" android:focusable="true" android:clickable="true" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/backspress" android:layout_marginStart="15.0dip" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_my_invoices" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/parental_contol_setting" android:layout_below="@id/iv_line" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:fontFamily="@string/font_family_regular" />
+                <View android:id="@id/view_line_my_invoices" android:background="@drawable/line_light_gray_small" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/tv_my_invoices" />
+            </RelativeLayout>
+            <com.google.android.material.tabs.TabLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/tab_layout_invoices" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="45.0dip" android:minHeight="?actionBarSize" android:layout_below="@id/rl_invoices" android:animateLayoutChanges="true" android:textDirection="locale" app:tabBackground="@drawable/tab_color_selector" app:tabGravity="center" app:tabIndicatorColor="@color/white" app:tabMode="fixed" app:tabSelectedTextColor="@color/black" app:tabTextColor="@color/black" />
+            <View android:id="@id/line_below_tabs" android:background="@drawable/line_services" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_below="@id/tab_layout_invoices" />
+            <androidx.viewpager.widget.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/line_below_tabs" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

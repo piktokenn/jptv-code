@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_goneMarginTop="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+        <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="42.0dip" android:src="@drawable/logo_white_long" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_toEndOf="@id/logo" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/settings" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/settings_small" android:layout_marginStart="10.0dip" android:layout_toEndOf="@id/separator" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_marginStart="5.0dip" android:layout_toEndOf="@id/settings" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/rate_us_text" android:layout_marginStart="10.0dip" android:layout_toEndOf="@id/separator2" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingEnd="30.0sp" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="#802a3543" android:paddingTop="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="70.0dip" android:layout_marginEnd="70.0dip">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/tv_parental_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_us_text" />
+            <ImageView android:id="@id/iv_div" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="15.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" app:srcCompat="@drawable/ic_ratingbar" />
+                <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginStart="10.0dip" app:srcCompat="@drawable/ic_ratingbar" />
+                <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginStart="10.0dip" app:srcCompat="@drawable/ic_ratingbar" />
+                <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginStart="10.0dip" app:srcCompat="@drawable/ic_ratingbar" />
+                <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginStart="10.0dip" app:srcCompat="@drawable/ic_ratingbar" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/rate_us" android:fontFamily="@string/font_family_medium" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="20.0dip">
+                <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/btn_rateus" android:tag="1" android:background="@drawable/logout_btn_effect" android:layout_width="150.0dip" android:layout_height="50.0dip" android:text="@string/rate_us_text" />
+                <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center|right" android:id="@id/btn_later" android:tag="2" android:background="@drawable/blue_btn_effect" android:layout_width="150.0dip" android:layout_height="50.0dip" android:text="@string/remember_me_later" android:layout_marginStart="30.0dip" android:layout_alignParentEnd="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar_toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="35.0dip" android:minHeight="?actionBarSize" android:layout_centerInParent="true" local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="23.0sp" android:layout_gravity="center_horizontal" android:id="@id/tv_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:fontFamily="@string/font_family_medium" style="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/appbar_toolbar">
+            <com.google.android.material.tabs.TabLayout android:id="@id/sliding_tabs" android:background="@color/colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabBackground="@drawable/tab_color_selector" app:tabIndicatorColor="@color/white" app:tabMode="scrollable" app:tabSelectedTextColor="@color/white" app:tabTextColor="@color/white" />
+            <LinearLayout android:id="@id/ll_cat_title" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                <LinearLayout android:id="@id/ll_header" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:id="@id/iv_back_button" android:background="@drawable/blur_lens_selector" android:visibility="gone" android:layout_width="65.0dip" android:layout_height="fill_parent" android:src="@drawable/hp_arrow_back" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+                    <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="120.0dip" android:layout_height="45.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/logo_white_long" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:id="@id/tv_cat_title" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/time" />
+                        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:paddingEnd="30.0sp" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textColor="@color/white" android:id="@id/test1111" android:background="@drawable/selector_checkbox" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="20.0dip" android:text="asljkdfklsajflskadf">
+                <requestFocus />
+            </TextView>
+            <com.dinoott.dinoottiptvbox.view.utility.NonSwipeableViewPager android:id="@id/viewpager" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_below="@id/ll_cat_title" />
+            <ProgressBar android:theme="@style/whiteLoader" android:id="@id/pb_loader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:indeterminate="true" android:layout_below="@id/sliding_tabs" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>

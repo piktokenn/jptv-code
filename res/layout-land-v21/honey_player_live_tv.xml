@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/app_video_box" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:id="@id/app_video_status" android:background="@android:color/background_dark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+        <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/app_video_status_text" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/small_problem" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layoutDirection="locale">
+        <com.dinoott.dinoottiptvbox.view.ijkplayer.widget.media.NSTIJKPlayerSkyTv android:layout_gravity="center" android:id="@id/video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale" />
+        <ProgressBar android:theme="@style/whiteLoader" android:layout_gravity="center" android:id="@id/app_video_loading" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminateOnly="true" android:indeterminateBehavior="repeat" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_player_header_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0">
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_player_header" android:background="@drawable/player_header_gradient" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:weightSum="10.0" android:paddingStart="35.0dip" android:paddingEnd="35.0dip">
+                    <LinearLayout android:orientation="vertical" android:id="@id/ll_top_left_back" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                            <LinearLayout android:gravity="center" android:id="@id/ll_back_click" android:background="@drawable/ripple_episode_rounded" android:focusable="false" android:layout_width="50.0dip" android:layout_height="50.0dip">
+                                <ImageView android:layout_gravity="center" android:id="@id/iv_back" android:tag="1" android:background="@drawable/icon_shadow" android:padding="7.0dip" android:focusable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/hp_arrow_back" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_back" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="8.0">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center|left" android:id="@id/tv_episode_name" android:layout_width="fill_parent" android:layout_height="50.0dip" android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/ll_top_right_setting" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                            <LinearLayout android:gravity="center" android:id="@id/ll_audio_subtitle_settings_click" android:background="@drawable/ripple_episode_rounded" android:focusable="false" android:layout_width="50.0dip" android:layout_height="50.0dip">
+                                <ImageView android:layout_gravity="center" android:id="@id/iv_audio_subtitle_track" android:tag="2" android:background="@drawable/icon_shadow" android:padding="7.0dip" android:focusable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/settings_icon" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_audio_subtitle_settings" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_player_footer" android:background="@drawable/player_footer_gradient" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="150.0dip" android:weightSum="2.0">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="40.0dip" android:paddingEnd="35.0dip">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                            <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="10.0">
+                                <ImageView android:layout_gravity="center" android:id="@id/iv_play" android:tag="3" android:background="@drawable/icon_shadow" android:padding="7.0dip" android:focusable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/hp_play" android:layout_marginStart="20.0dip" />
+                                <ImageView android:layout_gravity="center" android:id="@id/iv_pause" android:tag="3" android:background="@drawable/icon_shadow" android:padding="10.0dip" android:focusable="true" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/player_pause" android:layout_marginStart="20.0dip" />
+                                <ImageView android:layout_gravity="center" android:id="@id/iv_channel_logo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/logo_placeholder_white" android:layout_marginStart="15.0dip" />
+                                <RelativeLayout android:id="@id/rl_epgLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:layoutDirection="locale" android:layout_marginStart="10.0dip" android:layout_marginEnd="20.0dip">
+                                    <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/tv_current_program" android:visibility="visible" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/now_loading" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:textDirection="locale" android:layout_marginEnd="250.0dip" />
+                                    <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/tv_current_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/progressBar" android:layout_alignEnd="@id/progressBar" />
+                                    <ProgressBar android:id="@id/progressBar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="6.0dip" android:progressDrawable="@drawable/epgprogress" android:layout_below="@id/tv_current_program" android:layout_centerHorizontal="true" style="?android:progressBarStyleHorizontal" />
+                                    <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/tv_next_program" android:visibility="visible" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next_loading" android:scrollHorizontally="true" android:singleLine="true" android:layout_below="@id/progressBar" android:marqueeRepeatLimit="marquee_forever" android:textDirection="locale" android:layout_marginEnd="250.0dip" />
+                                    <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/tv_next_program_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progressBar" android:layout_alignEnd="@id/progressBar" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_bottom_footer_icons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="5.0" android:layout_weight="1.0" android:paddingStart="40.0dip" android:paddingEnd="40.0dip">
+                        <LinearLayout android:gravity="center_horizontal" android:id="@id/ll_previous_channel" android:tag="14" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_gravity="center" android:layout_width="30.0dip" android:layout_height="30.0dip" app:srcCompat="@drawable/exo_icon_previous" />
+                            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/previous_channel" android:singleLine="true" android:layout_marginStart="5.0dip" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_horizontal" android:id="@id/ll_channels_list" android:tag="4" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_gravity="center" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/hp_episodes" />
+                            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/channels_list" android:singleLine="true" android:layout_marginStart="10.0dip" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_horizontal" android:id="@id/ll_crop" android:tag="5" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_gravity="center" android:padding="5.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/hp_aspect_ratio" />
+                            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/aspect_ratio" android:singleLine="true" android:layout_marginStart="5.0dip" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_horizontal" android:id="@id/ll_multi_screen" android:tag="7" android:background="@drawable/ripple_episode" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" app:srcCompat="@drawable/hplib_ic_grid" />
+                            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/multi_screen" android:singleLine="true" android:layout_marginStart="5.0dip" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_horizontal" android:id="@id/ll_next_channel" android:tag="13" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:layout_gravity="center" android:layout_width="30.0dip" android:layout_height="30.0dip" app:srcCompat="@drawable/exo_icon_next" />
+                            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/next_channel" android:singleLine="true" android:layout_marginStart="5.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/ll_player_inner_icons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="5.0">
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:layout_gravity="start" android:orientation="horizontal" android:id="@id/ll_brightness" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:weightSum="2.0" android:rotation="-90.0" android:layout_marginStart="-20.0dip">
+                            <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.6">
+                                <SeekBar android:layout_gravity="center" android:id="@id/sb_brightness" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="255" android:thumb="@color/trasparent_full" android:thumbOffset="1000.0dip" android:progressTint="@color/white" android:progressBackgroundTint="#ff6c6b6b" style="@style/tallerBarStyle" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4">
+                                <TextView android:id="@id/tv_brightness" android:background="@drawable/hp_bright_1" android:layout_width="25.0dip" android:layout_height="25.0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1">
+                    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:gravity="start" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <FrameLayout android:layout_gravity="start|center" android:id="@id/fl_seek_left" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-60.0dip" android:layout_marginBottom="12.0dip" android:alpha="1.0" android:layout_marginEnd="7.0dip">
+                                <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_seek_count_left" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+                            </FrameLayout>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <LinearLayout android:gravity="start|center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <TextView android:textSize="13.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_seek_left" android:background="@drawable/hp_rewind" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:text="-10s" android:drawablePadding="10.0dip" android:layout_marginEnd="7.0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ll_pause_play" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1">
+                    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <FrameLayout android:layout_gravity="end|center" android:id="@id/fl_seek_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-60.0dip" android:layout_marginBottom="12.0dip" android:alpha="1.0" android:layout_marginEnd="7.0dip">
+                                <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_seek_count_right" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+                            </FrameLayout>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <LinearLayout android:gravity="end|center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <TextView android:textSize="13.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_seek_right" android:background="@drawable/hp_forward" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:text="+10s" android:drawablePadding="10.0dip" android:layout_marginEnd="7.0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:layout_gravity="start" android:orientation="horizontal" android:id="@id/ll_volume" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:weightSum="2.0" android:rotation="-90.0" android:layout_marginEnd="-20.0dip">
+                            <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.6">
+                                <SeekBar android:layout_gravity="center" android:id="@id/sb_volume" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:thumb="@color/trasparent_full" android:thumbOffset="1000.0dip" android:progressTint="@color/white" android:progressBackgroundTint="#ff6c6b6b" style="@style/tallerBarStyle" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4">
+                                <TextView android:id="@id/tv_volume" android:background="@drawable/hp_bright_1" android:layout_width="25.0dip" android:layout_height="25.0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/iv_radio" android:background="?android:selectableItemBackground" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/hp_radio" />
+        <RelativeLayout android:id="@id/rl_settings_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.2">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:orientation="vertical" android:background="@color/trasparent_black" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.2">
+                    <LinearLayout android:orientation="horizontal" android:background="#6b000000" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="10.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                                <ImageView android:layout_gravity="center" android:id="@id/iv_back_settings" android:tag="9" android:background="@drawable/icon_shadow" android:padding="7.0dip" android:focusable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/hp_arrow_back" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="8.0">
+                            <TextView android:textSize="20.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="Settings" android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:background="#ff959090" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <include layout="@layout/hp_subtitle_layout" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_episodes_box_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <RelativeLayout android:id="@id/rl_left" android:background="@color/trasparent_light" android:layout_width="250.0dip" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/rl_header_sidebar" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:background="@color/trasparent_light_2" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="10.0">
+                            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                                <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                                    <ImageView android:layout_gravity="center" android:id="@id/iv_back_episodes" android:tag="9" android:background="@drawable/icon_shadow_focused" android:padding="7.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/hp_arrow_back" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="8.0">
+                                <TextView android:textSize="18.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center|left" android:id="@id/tv_current_season" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/channels_list" android:singleLine="true" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </RelativeLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_header_sidebar">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view_left_sidebar_player" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_no_cat_found_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_header_sidebar">
+                    <TextView android:textColor="@color/white" android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:text="@string/no_cat_found" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_left_channel" android:background="@color/trasparent_light" android:layout_width="250.0dip" android:layout_height="fill_parent" android:layout_toEndOf="@id/rl_left">
+                <RelativeLayout android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <ListView android:scrollbarThumbVertical="@drawable/scrollbar_list_view" android:scrollbarStyle="insideOverlay" android:id="@id/lv_ch_left_side_player" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/ll_no_left_channel_found_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textColor="@color/white" android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:text="@string/no_channel_found" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/ll_pb_left_channel_list_player" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <ProgressBar android:theme="@style/whiteLoader" android:id="@id/pb_left_channel_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:indeterminateOnly="true" android:indeterminateBehavior="repeat" android:layout_marginEnd="10.0dip" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:id="@id/ll_aspect_ratio" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+            <TextView android:textSize="36.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/app_aspect_ratio_text" android:background="#a5150f0f" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:paddingStart="30.0dip" android:paddingEnd="30.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_screen_locked" android:paddingTop="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+            <ImageView android:layout_gravity="center|top" android:id="@id/iv_unlock_button" android:background="?android:selectableItemBackground" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/lock_circle" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Screen Locked" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/WhiteSmoke" android:layout_gravity="center|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap to Unlock" />
+        </LinearLayout>
+        <include layout="@layout/auto_play_popup_layout" />
+        <RelativeLayout android:id="@id/rl_movie_poster_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:background="#6b000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_movie_poster_box" android:layout_width="180.0dip" android:layout_height="280.0dip" android:scaleType="fitXY" android:layout_marginStart="100.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:id="@id/ll_click_to_play" android:background="@android:color/background_dark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/press_ok_to_play" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/ll_channel_jumping" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+            <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/app_channel_jumping_text" android:background="#a5150f0f" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" android:paddingStart="30.0dip" android:paddingEnd="30.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+        </LinearLayout>
+        <TableLayout android:layout_gravity="center|right" android:id="@id/hud_view" android:padding="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

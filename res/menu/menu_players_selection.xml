@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/nav_play_with_vlc" android:visible="true" android:title="@string/nav_play" />
+    <item android:id="@id/nav_play_with_mx" android:visible="false" android:title="@string/play_with_mx_player" />
+    <item android:id="@id/play_with_cast" android:visible="false" android:title="@string/play_with_cast" />
+    <item android:id="@id/iv_delete" android:visible="false" android:title="@string/delete" />
+    <item android:id="@id/iv_download" android:visible="false" android:title="@string/downloaded_data" />
+</menu>

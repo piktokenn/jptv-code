@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/activity_login" android:background="@drawable/splash_new_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_weight="0.4" android:layoutDirection="locale">
+        <ImageView android:id="@id/iv_logo" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="70.0sp" android:src="@drawable/logo" android:scaleType="fitCenter" android:layout_weight="0.6" android:layoutDirection="locale" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="6.0" android:layout_weight="0.6" android:layoutDirection="locale">
+        <TextView android:textSize="27.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_enter_credentials" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:text="@string/enter_detail_for_free_trail" android:layout_weight="0.8" android:fontFamily="sans-serif" android:textDirection="locale" android:layoutDirection="locale" android:layout_toEndOf="@id/iv_logo" />
+        <RelativeLayout android:id="@id/rl_email" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_weight="0.8" android:layoutDirection="locale" />
+        <RelativeLayout android:id="@id/rl_username" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_weight="0.8" android:layoutDirection="locale" />
+        <RelativeLayout android:id="@id/rl_password" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_weight="0.8" android:layoutDirection="locale" />
+        <RelativeLayout android:id="@id/rl_confirmpassword" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_weight="0.8" android:layoutDirection="locale" />
+        <RelativeLayout android:id="@id/rl_bt_submit" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_weight="0.8" android:layoutDirection="locale" />
+        <RelativeLayout android:id="@id/rl_already_register" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_weight="0.8" android:layoutDirection="locale" />
+    </LinearLayout>
+</LinearLayout>

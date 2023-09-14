@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <view android:layout_gravity="center" android:id="@id/fabbutton_circle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" class="mbanje.kurt.fabbutton.CircleImageView" />
+    <view android:layout_gravity="center" android:id="@id/fabbutton_ring" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:progress="0" android:indeterminate="false" app:fbb_autoStart="false" class="mbanje.kurt.fabbutton.ProgressRingView" />
+</merge>

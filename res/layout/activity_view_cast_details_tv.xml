@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar_toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/toolbar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="60.0dip" android:minHeight="?actionBarSize" android:layout_centerInParent="true" local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                <ImageView android:layout_gravity="center" android:id="@id/iv_back_button" android:background="@drawable/blur_lens_selector" android:visibility="gone" android:layout_width="65.0dip" android:layout_height="fill_parent" android:src="@drawable/hp_arrow_back" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+                <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="190.0dip" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:src="@drawable/logo_white_long" />
+                <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:id="@id/tv_cast_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:freezesText="true" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="@string/font_family_bold" android:textDirection="locale" android:paddingEnd="80.0dip" android:layout_toEndOf="@id/logo" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/rl_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rl_account_info" android:background="@color/colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" />
+            <ProgressBar android:theme="@style/whiteLoader" android:gravity="center" android:id="@id/tv_detail_ProgressBar" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginTop="63.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+            <ScrollView android:id="@id/scrollView" android:focusable="true" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+                    <LinearLayout android:id="@id/ll_person_info_box" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="200.0dip" android:weightSum="3.0" android:layoutDirection="locale">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:weightSum="3.35" android:layoutDirection="locale">
+                                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" android:layoutDirection="locale">
+                                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                                            <ImageView android:id="@id/iv_movie_image" android:background="@drawable/rounded_edge_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.8" android:layoutDirection="locale">
+                                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="4.0" android:layoutDirection="locale">
+                                            <LinearLayout android:orientation="horizontal" android:id="@id/ll_dob_box" android:focusable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale">
+                                                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_date_of_birth_heading" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/date_of_birth" android:singleLine="true" android:paddingStart="30.0dip" />
+                                                <requestFocus />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_pob_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale">
+                                                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_place_of_birth_heading" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/place_of_birth" android:singleLine="true" android:paddingStart="30.0dip" />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_gender_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale">
+                                                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_gender_heading" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/gender" android:singleLine="true" android:paddingStart="30.0dip" />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_knownfor_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale">
+                                                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_known_for_heading" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/known_for" android:singleLine="true" android:paddingStart="30.0dip" />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_dod_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale">
+                                                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/movie_info_text1" android:gravity="left" android:id="@id/tv_cast" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/date_of_death" android:paddingStart="30.0dip" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.95" android:layoutDirection="locale">
+                                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="4.0">
+                                            <LinearLayout android:id="@id/ll_dob_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                <TextView android:textSize="16.0sp" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_date_of_birth" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/N_A" android:singleLine="true" />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_pob_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                <TextView android:textSize="16.0sp" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_place_of_birth" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/N_A" android:singleLine="true" />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_gender_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                <TextView android:textSize="16.0sp" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_gender" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/N_A" android:singleLine="true" />
+                                            </LinearLayout>
+                                            <LinearLayout android:orientation="horizontal" android:id="@id/ll_known_for_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                <TextView android:textSize="16.0sp" android:textColor="@color/movie_info_text1" android:ellipsize="marquee" android:gravity="left" android:id="@id/tv_known_for" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/N_A" android:singleLine="true" />
+                                            </LinearLayout>
+                                            <LinearLayout android:id="@id/ll_dod_box_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.75" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                                                    <TextView android:textSize="16.0sp" android:textColor="@color/movie_info_text1" android:gravity="left" android:id="@id/tv_dod_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/N_A" android:maxLines="3" />
+                                                </RelativeLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/description_box" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_person_info_box" android:layoutDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/series_info_text1" android:id="@id/tv_cast_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_below="@id/description_box" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+                        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_cast" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_detail_ProgressBar" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_detail_left_side" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" android:layoutDirection="locale">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="5.0" android:layoutDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_detail_right_side" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" android:layoutDirection="locale">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="5.0" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>

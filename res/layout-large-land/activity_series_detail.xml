@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar_toolbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/toolbar" android:visibility="visible" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="60.0dip" android:minHeight="?actionBarSize" android:layout_centerInParent="true" local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                <ImageView android:layout_gravity="center" android:id="@id/iv_back_button" android:background="@drawable/blur_lens_selector" android:visibility="gone" android:layout_width="65.0dip" android:layout_height="fill_parent" android:src="@drawable/hp_arrow_back" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+                <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="190.0dip" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:src="@drawable/logo_white_long" />
+                <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:id="@id/tv_movie_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:freezesText="true" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="@string/font_family_bold" android:textDirection="locale" android:paddingEnd="80.0dip" android:layout_toEndOf="@id/logo" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/rl_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rl_account_info" android:background="@color/colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" />
+            <androidx.core.widget.NestedScrollView android:id="@id/nestedScrollView" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+                <ScrollView android:id="@id/scrollView" android:focusable="false" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:id="@id/ll_movie_info_box" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+                            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                                <LinearLayout android:layout_width="fill_parent" android:layout_height="250.0dip" android:weightSum="3.0" android:layoutDirection="locale">
+                                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:weightSum="3.35" android:layoutDirection="locale">
+                                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" android:layoutDirection="locale">
+                                            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.7" android:layoutDirection="locale">
+                                                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.2" android:layoutDirection="locale">
+                                                    <ImageView android:id="@id/iv_movie_image" android:background="@drawable/rounded_edge_3" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                                                </LinearLayout>
+                                                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" android:layoutDirection="locale">
+                                                    <RatingBar android:theme="@style/RatingBar" android:layout_gravity="center" android:id="@id/rating" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:numStars="5" android:stepSize="0.1" android:isIndicator="true" style="?android:ratingBarStyleSmall" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" android:layoutDirection="locale">
+                                            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.9" android:layoutDirection="locale">
+                                                <LinearLayout android:id="@id/ll_director_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" android:layoutDirection="locale">
+                                                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/series_info_text1" android:id="@id/tv_director" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/diected_by" android:textDirection="locale" android:paddingStart="30.0dip" />
+                                                </LinearLayout>
+                                                <LinearLayout android:id="@id/ll_released_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" android:layoutDirection="locale">
+                                                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/series_info_text1" android:id="@id/tv_release_date" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/release_date" android:textDirection="locale" android:paddingStart="30.0dip" />
+                                                </LinearLayout>
+                                                <LinearLayout android:id="@id/ll_duration_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" android:layoutDirection="locale">
+                                                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/series_info_text1" android:id="@id/tv_movie_duration" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/duration" android:textDirection="locale" android:paddingStart="30.0dip" />
+                                                </LinearLayout>
+                                                <LinearLayout android:id="@id/ll_genre_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" android:layoutDirection="locale">
+                                                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/series_info_text1" android:id="@id/tv_movie_genere" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/genre1" android:textDirection="locale" android:paddingStart="30.0dip" />
+                                                </LinearLayout>
+                                                <LinearLayout android:id="@id/ll_cast_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.2" android:layoutDirection="locale">
+                                                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/series_info_text1" android:id="@id/tv_cast" android:paddingTop="1.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/plot" android:textDirection="locale" android:paddingStart="30.0dip" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.15" android:layoutDirection="locale">
+                                            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.9" android:layoutDirection="locale">
+                                                <LinearLayout android:id="@id/ll_director_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="1.0" android:layout_weight="1.2" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_weight="0.8" android:layoutDirection="locale">
+                                                        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5">
+                                                            <TextView android:textSize="16.0sp" android:textColor="@color/series_info_text1" android:ellipsize="end" android:id="@id/tv_director_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textDirection="locale" />
+                                                        </LinearLayout>
+                                                        <LinearLayout android:id="@id/ll_released_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" android:layoutDirection="locale">
+                                                            <TextView android:textSize="16.0sp" android:textColor="@color/series_info_text1" android:id="@id/tv_release_date_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textDirection="locale" />
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+                                                    <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.2" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                        <ImageView android:layout_gravity="center" android:id="@id/iv_favourite" android:tag="12" android:focusable="true" android:visibility="visible" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/fav_heart_white" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                                <LinearLayout android:id="@id/ll_duration_box_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                    <TextView android:textSize="18.0sp" android:textColor="@color/series_info_text1" android:id="@id/tv_movie_duration_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textDirection="locale" />
+                                                </LinearLayout>
+                                                <LinearLayout android:orientation="horizontal" android:id="@id/ll_genre_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layoutDirection="locale">
+                                                        <TextView android:textSize="16.0sp" android:textColor="@color/series_info_text1" android:id="@id/tv_genre_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:textDirection="locale" />
+                                                    </RelativeLayout>
+                                                </LinearLayout>
+                                                <LinearLayout android:id="@id/ll_cast_box_info" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.6" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="locale">
+                                                        <TextView android:textSize="16.0sp" android:textColor="@color/series_info_text1" android:ellipsize="end" android:id="@id/tv_cast_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:textDirection="locale" />
+                                                        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/series_heading" android:gravity="center" android:id="@id/tv_readmore" android:tag="4" android:focusable="true" android:nextFocusDown="@id/tv_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/read_more" android:layout_below="@id/tv_cast_info" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:layout_marginStart="10.0dip" />
+                                                    </RelativeLayout>
+                                                </LinearLayout>
+                                                <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                                                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0" android:layoutDirection="locale">
+                                                        <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layoutDirection="locale" android:layout_marginEnd="10.0dip">
+                                                            <LinearLayout android:orientation="vertical" android:id="@id/ll_play_button_main_layout" android:background="@drawable/blue_btn_effect" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                                            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                                            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:id="@id/tv_play" android:tag="1" android:background="?android:selectableItemBackground" android:focusable="true" android:nextFocusDown="@id/episode_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/small_play" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:layout_toEndOf="@id/tv_watch_trailer">
+                                                            <requestFocus />
+                                                            </TextView>
+                                                            <ProgressBar android:layout_gravity="bottom" android:id="@id/pb_button_recent_watch" android:background="#a6706969" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/recent_watch_progress" android:minWidth="200.0dip" android:minHeight="3.0dip" android:layout_marginStart="1.0dip" android:layout_marginEnd="1.0dip" style="?android:progressBarStyleHorizontal" />
+                                                            </FrameLayout>
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+                                                        <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layoutDirection="locale" android:layout_marginEnd="10.0dip">
+                                                            <LinearLayout android:id="@id/ll_season_button_main_layout" android:background="@drawable/rounded_edge_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                                            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                                            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_season_button" android:tag="2" android:background="?android:selectableItemBackground" android:focusable="true" android:focusableInTouchMode="true" android:nextFocusDown="@id/episode_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/season_number" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:paddingEnd="10.0dip" android:layout_toEndOf="@id/tv_play" />
+                                                            <ImageView android:layout_gravity="end|center" android:layout_width="15.0sp" android:layout_height="15.0sp" android:src="@drawable/hp_dropdown" android:layout_marginEnd="10.0dip" />
+                                                            </FrameLayout>
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+                                                        <LinearLayout android:id="@id/ll_watch_trailer" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layoutDirection="locale">
+                                                            <LinearLayout android:id="@id/ll_watch_trailer_button_main_layout" android:background="@drawable/rounded_edge_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                                            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_watch_trailer" android:tag="5" android:background="?android:selectableItemBackground" android:focusable="true" android:focusableInTouchMode="true" android:visibility="visible" android:nextFocusDown="@id/episode_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/watch_trailer" android:fontFamily="@string/font_family_medium" android:textDirection="locale" />
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:id="@id/description_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_movie_info_box" android:layoutDirection="locale" android:layout_marginStart="100.0dip" android:layout_marginEnd="100.0dip" />
+                    </LinearLayout>
+                </ScrollView>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/scrollView">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/tabs_layout" android:tag="10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip">
+                        <TextView android:textSize="17.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/episode_tab" android:tag="10" android:background="@drawable/episode_cast_tab_background_clicked" android:focusable="true" android:nextFocusUp="@id/tv_play" android:layout_width="200.0dip" android:layout_height="40.0dip" android:text="@string/episodes" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:layout_toEndOf="@id/tv_watch_trailer" />
+                        <TextView android:textSize="17.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/cast_tab" android:tag="11" android:background="@drawable/episode_cast_tab_background" android:focusable="true" android:nextFocusUp="@id/tv_play" android:layout_width="200.0dip" android:layout_height="40.0dip" android:text="@string/cast" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:layout_toEndOf="@id/tv_watch_trailer" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_hr_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tabs_layout">
+                        <LinearLayout android:orientation="horizontal" android:background="#ff848383" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_hr_line">
+                        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/my_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:layoutDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip" />
+                        <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@id/rv_cast" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="50.0dip" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff01122e" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_back" android:layout_width="50.0dip" android:layout_height="fill_parent" android:onClick="onBackClick">
+        <ImageView android:id="@id/iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/vw_ic_back" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:id="@id/tv_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/rl_back" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_folder" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <TextView android:textSize="20.0dip" android:textColor="@android:color/white" android:ellipsize="end" android:layout_gravity="center" android:id="@id/tv_folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="120.0dip" android:lines="1" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/vw_ic_arrow_down" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_done" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/tv_done" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vw_confirm" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_rec_aud" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_done">
+        <ImageView android:id="@id/iv_rec_aud" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

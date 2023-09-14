@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/dashboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ripple="http://schemas.android.com/apk/res-auto">
+    <com.skyfishjy.library.RippleBackground android:id="@id/ripple_effect" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" ripple:rb_color="@color/white" ripple:rb_duration="5000" ripple:rb_radius="25.0dip" ripple:rb_rippleAmount="4" ripple:rb_scale="6.0">
+        <view android:id="@id/determinate" android:clickable="true" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/fab_vpn" android:max="100" android:indeterminate="true" android:layout_centerInParent="true" android:color="@color/black" ripple:fbb_autoStart="true" ripple:fbb_endBitmap="@drawable/ic_fab_complete" ripple:fbb_hideProgressOnComplete="true" ripple:fbb_progressColor="#ffffffff" ripple:fbb_progressWidthRatio="0.1" ripple:fbb_showEndBitmap="true" ripple:fbb_showShadow="true" class="mbanje.kurt.fabbutton.FabButton" />
+    </com.skyfishjy.library.RippleBackground>
+    <RelativeLayout android:id="@id/rl_appbar" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="13.0dip" android:weightSum="3.0" android:layoutDirection="locale" android:paddingEnd="30.0dip" android:layout_marginStart="30.0dip">
+        <ImageView android:id="@id/iv_logo" android:background="@drawable/logo_white_long" android:layout_width="120.0dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_profile_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vpn_status" android:layout_centerInParent="true" android:textAllCaps="true" android:textDirection="locale" android:layout_marginEnd="10.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/ll_manage_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <ImageView android:layout_gravity="center|right" android:id="@id/iv_add_more" android:tag="7" android:paddingRight="5.0dip" android:focusable="false" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/add_more_user" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_add_user" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/manage_prof" android:textAllCaps="true" android:textDirection="locale" android:layout_marginEnd="5.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_appbar">
+        <RelativeLayout android:id="@id/ll_connect_disconnect" android:background="@drawable/ripple_effect_vpn" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip">
+                    <LinearLayout android:id="@id/ll_status_connecting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Status: " />
+                        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tv_touch_status" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textAllCaps="true" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/ll_tab_to_connect" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/touch_connect" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+                    <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/btn_resume_pause" android:tag="1" android:background="@drawable/logout_btn_effect" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="50.0dip" android:text="@string/pause" />
+                    <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center|right" android:id="@id/btn_home" android:tag="2" android:background="@drawable/blue_btn_effect" android:layout_width="150.0dip" android:layout_height="50.0dip" android:text="@string/menu_home" android:layout_marginStart="20.0dip" android:layout_alignParentEnd="true" />
+                    <Button android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/btn_back" android:tag="1" android:background="@drawable/logout_btn_effect" android:visibility="visible" android:layout_width="150.0dip" android:layout_height="50.0dip" android:text="@string/back_button" android:layout_marginStart="30.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

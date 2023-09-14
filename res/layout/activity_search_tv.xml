@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cl_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_right" android:background="@drawable/black_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_back_button" android:background="@drawable/blur_lens_selector" android:visibility="gone" android:layout_width="65.0dip" android:layout_height="wrap_content" android:src="@drawable/hp_arrow_back" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+        <fragment android:name="com.dinoott.dinoottiptvbox.view.fragment.SearchFragment" android:id="@id/search_fragment" android:layout_width="fill_parent" android:layout_height="115.0dip" android:layout_marginEnd="35.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:layout_below="@id/search_fragment">
+            <LinearLayout android:orientation="horizontal" android:id="@id/tabs_layout" android:tag="10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="35.0dip" android:layout_marginEnd="35.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/live_channels_tab" android:tag="10" android:background="@drawable/episode_cast_tab_background_clicked" android:focusable="true" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Live Channels" android:fontFamily="@string/font_family_medium" android:textDirection="locale" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/movies_tab" android:tag="11" android:background="@drawable/episode_cast_tab_background" android:focusable="true" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Movies" android:fontFamily="@string/font_family_medium" android:textDirection="locale" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/series_tab" android:tag="12" android:background="@drawable/episode_cast_tab_background" android:focusable="true" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Series" android:fontFamily="@string/font_family_medium" android:textDirection="locale" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/program_tab" android:tag="13" android:background="@drawable/episode_cast_tab_background" android:focusable="true" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Programs" android:fontFamily="@string/font_family_medium" android:textDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_hr_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tabs_layout">
+                <LinearLayout android:orientation="horizontal" android:background="#ff848383" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/live_recycler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/ll_hr_line" android:layoutDirection="locale" android:layout_marginStart="35.0dip" android:layout_marginEnd="35.0dip" />
+            <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/movie_recycler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/ll_hr_line" android:layoutDirection="locale" android:layout_marginStart="35.0dip" android:layout_marginEnd="35.0dip" />
+            <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/series_recycler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/ll_hr_line" android:layoutDirection="locale" android:layout_marginStart="35.0dip" android:layout_marginEnd="35.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_program_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:weightSum="3.0" android:layout_below="@id/ll_hr_line" android:layout_marginStart="35.0dip">
+                <LinearLayout android:gravity="center" android:background="#ae222527" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4">
+                    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/channel_recycler_view" android:paddingBottom="300.0dip" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layoutDirection="locale" />
+                </LinearLayout>
+                <LinearLayout android:background="#ae222527" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.5">
+                    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/program_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.1">
+                    <LinearLayout android:orientation="vertical" android:background="#ae222527" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="10.0dip" android:layout_marginEnd="35.0dip">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_program_name_right_side" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:id="@id/tv_program_start_date_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:id="@id/tv_program_stop_date_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/ll_pb_recent_watch" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginTop="5.0dip" android:textDirection="locale" android:layoutDirection="locale">
+                            <ProgressBar android:id="@id/pb_recent_watch" android:background="#a6706969" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/epgprogress" android:minWidth="100.0dip" android:minHeight="10.0dip" style="?android:progressBarStyleHorizontal" />
+                        </LinearLayout>
+                        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:id="@id/tv_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_no_record_found" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Search any Channel, Movies and Series" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

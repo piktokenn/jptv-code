@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_button" android:tag="20" android:background="@drawable/black_button_dark" android:focusable="true" android:layout_width="120.0dip" android:layout_height="40.0dip" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_button_season" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fontFamily="@string/font_family_medium" android:textDirection="locale" />
+</LinearLayout>

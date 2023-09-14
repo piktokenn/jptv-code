@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <restriction android:title="@string/apprest_ver" android:key="version" android:defaultValue="1" />
+    <restriction android:title="@string/apprest_vpnlist" android:key="vpn_configuration_list">
+        <restriction android:title="@string/apprest_vpnconf" android:key="vpn_configuration">
+            <restriction android:description="@string/apprest_uuid_desc" android:title="@string/apprest_uuid" android:key="uuid" />
+            <restriction android:description="@string/apprest_name_desc" android:title="@string/apprest_name" android:key="name" />
+            <restriction android:description="@string/apprest_ovpn_desc" android:title="@string/apprest_ovpn" android:key="ovpn" />
+        </restriction>
+    </restriction>
+</restrictions>

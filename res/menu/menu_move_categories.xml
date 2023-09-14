@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/play" android:id="@id/nav_move_to_live" android:visible="true" android:title="@string/add_to_live" />
+    <item android:icon="@drawable/play" android:id="@id/nav_move_to_movie" android:visible="true" android:title="@string/add_to_movies" />
+    <item android:icon="@drawable/play" android:id="@id/nav_move_to_series" android:visible="true" android:title="@string/add_to_series" />
+</menu>

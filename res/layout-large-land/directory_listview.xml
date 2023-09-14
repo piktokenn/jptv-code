@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.dinoott.dinoottiptvbox.view.utility.ListViewMaxHeight android:id="@id/lv_ch" android:background="@color/white" android:focusable="true" android:visibility="visible" android:scrollbars="vertical" android:nextFocusUp="@id/et_search" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/selector_sky_list" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" app:maxHeight="200.0dip">
+        <requestFocus />
+    </com.dinoott.dinoottiptvbox.view.utility.ListViewMaxHeight>
+</androidx.constraintlayout.widget.ConstraintLayout>

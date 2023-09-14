@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/m_back" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginTop="60.0dip" android:weightSum="3.0" android:layoutDirection="locale" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <ImageView android:id="@id/iv_multiuser_logo" android:background="@drawable/logo_white_long" android:layout_width="150.0dip" android:layout_height="42.0dip" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="20.0dip" android:weightSum="3.0" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/btn_pick_video" android:background="@drawable/btn_click1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:weightSum="1.0" android:layout_weight="1.0" android:onClick="onClick" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:tint="@color/white" android:layout_weight="0.3" app:srcCompat="@drawable/ic_slow_motion_video_black_24dp" />
+            <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.01" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/video_lib" android:layout_weight="0.6" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/btn_pick_audio" android:background="@drawable/btn_click1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:weightSum="1.0" android:layout_weight="1.0" android:onClick="onClick" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:tint="@color/white" android:layout_weight="0.3" app:srcCompat="@drawable/ic_music_note_black_24dp" />
+            <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.01" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/audio_lib" android:layout_weight="0.6" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/btn_pick_file" android:background="@drawable/btn_click1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:weightSum="1.0" android:layout_weight="1.0" android:onClick="onClick" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:tint="@color/white" android:layout_weight="0.3" app:srcCompat="@drawable/ic_insert_drive_file_black_24dp" />
+            <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.01" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/play_local_files" android:layout_weight="0.6" android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

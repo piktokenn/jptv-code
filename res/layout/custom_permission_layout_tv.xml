@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/shape_rounded_corners" android:layout_width="450.0dip" android:layout_height="220.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="35.0dip" android:layout_height="40.0dip" android:src="@drawable/warning_icon" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/trasparent_black" android:gravity="bottom|center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:layout_gravity="center" android:id="@id/txt_dia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:textAlignment="center" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginTop="6.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_no_button_main_layout" android:background="@drawable/black_button_dark" android:layout_width="90.0dip" android:layout_height="fill_parent" android:layout_marginEnd="3.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center" android:id="@id/btn_no" android:tag="1" android:background="?android:selectableItemBackground" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:layout_toEndOf="@id/tv_watch_trailer" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/ll_yes_button_main_layout" android:background="@drawable/blue_btn_effect" android:layout_width="90.0dip" android:layout_height="fill_parent" android:layout_marginStart="3.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_yes" android:tag="2" android:background="?android:selectableItemBackground" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/yes" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:textDirection="locale" android:layout_toEndOf="@id/tv_play">
+                <requestFocus />
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

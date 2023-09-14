@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/pref_title_general">
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_enable_background_play" android:key="@string/pref_key_enable_background_play" android:summary="@string/pref_summary_enable_background_play" android:defaultValue="false" android:disableDependentsState="true" />
+        <tv.danmaku.ijk.media.example.widget.preference.IjkListPreference android:persistent="true" android:entries="@array/pref_entries_player" android:title="@string/pref_title_player" android:key="@string/pref_key_player" android:defaultValue="0" android:entryValues="@array/pref_entry_values_player" app:entrySummaries="@array/pref_entry_summaries_player" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_ijkplayer_video">
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_using_media_codec" android:key="@string/pref_key_using_media_codec" android:summary="@string/pref_summary_using_media_codec" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_using_media_codec_auto_rotate" android:key="@string/pref_key_using_media_codec_auto_rotate" android:summary="@string/pref_summary_using_media_codec_auto_rotate" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_media_codec_handle_resolution_change" android:key="@string/pref_key_media_codec_handle_resolution_change" android:summary="@string/pref_summary_media_codec_handle_resolution_change" android:defaultValue="false" />
+        <tv.danmaku.ijk.media.example.widget.preference.IjkListPreference android:persistent="true" android:entries="@array/pref_entries_pixel_format" android:title="@string/pref_title_pixel_format" android:key="@string/pref_key_pixel_format" android:defaultValue="" android:entryValues="@array/pref_entry_values_pixel_format" app:entrySummaries="@array/pref_entry_summaries_pixel_format" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_ijkplayer_audio">
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_using_opensl_es" android:key="@string/pref_key_using_opensl_es" android:summary="@string/pref_summary_using_opensl_es" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_render_view">
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_enable_no_view" android:key="@string/pref_key_enable_no_view" android:summary="@string/pref_summary_enable_no_view" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_enable_surface_view" android:key="@string/pref_key_enable_surface_view" android:summary="@string/pref_summary_enable_surface_view" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_enable_texture_view" android:key="@string/pref_key_enable_texture_view" android:summary="@string/pref_summary_enable_texture_view" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_enable_detached_surface_texture" android:key="@string/pref_key_enable_detached_surface_texture" android:summary="@string/pref_summary_enable_detached_surface_texture" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_misc">
+        <CheckBoxPreference android:persistent="true" android:title="@string/pref_title_using_mediadatasource" android:key="@string/pref_key_using_mediadatasource" android:summary="@string/pref_summary_using_mediadatasource" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

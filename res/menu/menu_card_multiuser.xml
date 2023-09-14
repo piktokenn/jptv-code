@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/login_icon" android:id="@id/login_user" android:title="@string/login_user" app:showAsAction="never" />
+    <item android:icon="@drawable/edit_icon" android:id="@id/edit_user" android:visible="false" android:title="@string/edit_user" app:showAsAction="never" />
+    <item android:icon="@drawable/delete_icon" android:id="@id/delete_user" android:title="@string/delete" />
+</menu>

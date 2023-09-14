@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="epg_channel_layout_height">30.0dip</dimen>
+    <dimen name="epg_channel_layout_width">180.0dip</dimen>
+    <dimen name="epg_event_layout_text">16.0dip</dimen>
+    <dimen name="epg_time_bar_text">14.0dip</dimen>
+</resources>

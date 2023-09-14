@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/rl_movie" android:tag="20" android:layout_width="fill_parent" android:layout_height="140.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/card_view" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:weightSum="10.0" android:textDirection="locale" android:layoutDirection="locale">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_weight="2.5" android:textDirection="locale" android:layoutDirection="locale">
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_episode_thumbnail" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:textDirection="locale" android:layoutDirection="locale">
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardBackgroundColor="@color/trasparent_full" app:cardCornerRadius="5.0dip" app:cardElevation="0.0dip" app:cardMaxElevation="0.0dip">
+                            <ImageView android:id="@id/iv_movie_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout android:orientation="horizontal" android:id="@id/ll_hover" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_play_arrow_white_24dp" android:scaleType="center">
+                            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <ImageView android:layout_gravity="center" android:orientation="horizontal" android:id="@id/iv_play_icon" android:padding="50.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/hp_play_hover" />
+                                <LinearLayout android:orientation="horizontal" android:id="@id/ll_now_playing_paused" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_now_playing" android:background="@color/trasparent_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                        <pl.droidsonroids.gif.GifTextView android:id="@id/sound_waves" android:background="@drawable/sound" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+                                        <TextView android:textSize="14.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Now Playing" />
+                                    </LinearLayout>
+                                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_now_paused" android:background="@color/trasparent_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                        <pl.droidsonroids.gif.GifTextView android:id="@id/sound_mute_waves" android:background="@drawable/sound_mute" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+                                        <TextView android:textSize="14.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Paused" />
+                                    </LinearLayout>
+                                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_buffering" android:background="@color/trasparent_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                        <pl.droidsonroids.gif.GifTextView android:id="@id/buffering" android:background="@drawable/buffering" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+                                        <TextView android:textSize="14.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Buffering" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/ll_video_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <com.dinoott.dinoottiptvbox.view.ijkplayer.widget.media.NSTIJKPlayerSeriesThumbnail android:layout_gravity="center" android:id="@id/video_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ll_pb_recent_watch" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="3.0dip" android:textDirection="locale" android:layoutDirection="locale">
+                            <ProgressBar android:id="@id/pb_recent_watch" android:background="#a6706969" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/recent_watch_progress" android:minWidth="200.0dip" android:minHeight="10.0dip" style="?android:progressBarStyleHorizontal" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/ripple_episode" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="5.2" android:layout_weight="7.5" android:textDirection="locale" android:layoutDirection="locale">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:textDirection="locale" android:layoutDirection="locale">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/vod_text" android:ellipsize="marquee" android:gravity="start|center" android:id="@id/tv_movie_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/loading" android:layout_marginStart="15.0dip" android:layout_marginEnd="0.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.3" android:textDirection="locale" android:layoutDirection="locale">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <RatingBar android:theme="@style/RatingBar" android:layout_gravity="center_vertical" android:id="@id/rating" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="0.1" android:isIndicator="true" android:layout_marginStart="15.0dip" style="?android:ratingBarStyleSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:textDirection="locale" android:layoutDirection="locale">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="start|center" android:id="@id/tv_episode_time" android:background="@drawable/rounded_edge_2" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:textDirection="locale" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" android:textDirection="locale" android:layoutDirection="locale">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/series_info_text1" android:ellipsize="end" android:gravity="start|center" android:id="@id/tv_episode_desc" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:textDirection="locale" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

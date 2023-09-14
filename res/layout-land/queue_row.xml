@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" style="@style/commonListItemStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/bg_swipe_item_right" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/drag_handle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_drag_updown_grey_24dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/controls" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/drag_handle" android:layout_centerVertical="true">
+            <ImageButton android:id="@id/play_pause" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:src="@drawable/hp_play" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/controls_upcoming" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <ImageButton android:id="@id/play_upcoming" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_mini_controller_upcoming_play" android:layout_centerVertical="true" />
+                <ImageButton android:id="@id/stop_upcoming" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/ic_mini_controller_upcoming_stop" android:layout_centerVertical="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_video" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/controls" android:layout_toRightOf="@id/imageView1" android:layout_centerVertical="true">
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:ellipsize="end" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First Line" android:maxLines="1" android:fontFamily="sans-serif" />
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:ellipsize="end" android:id="@id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="Second Line" android:maxLines="1" android:fontFamily="sans-serif-light" />
+        </LinearLayout>
+        <View android:background="@drawable/vertical_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_toRightOf="@id/imageView1" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

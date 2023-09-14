@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/ll_list_view" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_channel_and_program" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_channel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="13.0sp" android:textColor="@color/live_sky_text" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/tv_program_title" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:layout_marginStart="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_program" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="10.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_program_start_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:layout_marginStart="10.0dip" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_program_stop_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" />
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_pb_recent_watch" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="2.0dip" android:textDirection="locale" android:layoutDirection="locale" android:layout_marginStart="10.0dip">
+                    <ProgressBar android:id="@id/pb_recent_watch" android:background="#a6706969" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/epgprogress" android:minWidth="100.0dip" android:minHeight="10.0dip" style="?android:progressBarStyleHorizontal" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

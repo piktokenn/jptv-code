@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/dashboard_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+        <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="42.0dip" android:src="@drawable/logo_white_long" android:layout_centerVertical="true" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_toEndOf="@id/logo" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/settings_small" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator_second" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/textView" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView_second" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/external_players" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator_second" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:paddingEnd="30.0dip" android:layout_alignParentEnd="true" />
+        <LinearLayout android:gravity="center" android:id="@id/ll_add_player" android:background="@drawable/selector_checkbox" android:padding="5.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <ImageView android:layout_gravity="center|right" android:id="@id/iv_add_more" android:tag="7" android:paddingRight="5.0dip" android:focusable="false" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/add_more_user" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_add_player" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_player" android:textAllCaps="true" android:textDirection="locale" android:layout_marginEnd="5.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_settings" android:paddingStart="60.0dip" android:paddingEnd="60.0dip">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ll_progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_below="@id/rl_settings" android:layout_centerInParent="true" android:paddingStart="60.0dip" android:paddingEnd="60.0dip">
+        <ProgressBar android:layout_width="50.0dip" android:layout_height="50.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_no_data_found" android:background="@drawable/selector_checkbox" android:padding="30.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/iv_add_player" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/add_more_user" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_player" />
+    </LinearLayout>
+</RelativeLayout>

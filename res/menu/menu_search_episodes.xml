@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/menu_search_selector" android:id="@id/action_search" android:orderInCategory="102" android:title="@string/search" app:actionViewClass="androidx.appcompat.widget.SearchView" app:showAsAction="collapseActionView|ifRoom" />
+    <item android:icon="@drawable/menu_dots_selector" android:id="@id/empty" android:orderInCategory="103" android:title="Options" app:showAsAction="always">
+        <menu>
+            <item android:icon="@drawable/show_icon_menu" android:id="@id/layout_view_show_movie_name" android:visible="false" android:title="@string/show_movie_name" />
+            <item android:icon="@drawable/hide_icon_menu" android:id="@id/layout_view_hide_movie_name" android:visible="false" android:title="@string/hide_movie_name" />
+            <item android:icon="@drawable/show_icon_menu" android:id="@id/layout_view_show_series_name" android:visible="false" android:title="@string/show_series_name" />
+            <item android:icon="@drawable/hide_icon_menu" android:id="@id/layout_view_hide_series_name" android:visible="false" android:title="@string/hide_series_name" />
+            <item android:icon="@drawable/show_icon_menu" android:id="@id/layout_view_show_channel_name" android:visible="false" android:title="@string/show_channel_name" />
+            <item android:icon="@drawable/hide_icon_menu" android:id="@id/layout_view_hide_channel_name" android:visible="false" android:title="@string/hide_channel_name" />
+            <item android:icon="@drawable/sort" android:id="@id/menu_sort" android:title="@string/sort_optn" />
+            <item android:icon="@drawable/ic_delete_black" android:id="@id/nav_delete_all" android:visible="false" android:title="@string/delete_all" />
+            <item android:icon="@drawable/refresh_icon" android:id="@id/menu_load_channels_vod1" android:visible="false" android:title="@string/load_channels_vod" />
+        </menu>
+    </item>
+</menu>

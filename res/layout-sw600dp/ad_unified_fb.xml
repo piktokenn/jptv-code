@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ads.NativeAdLayout android:id="@id/native_banner_ad_container" android:background="@drawable/selector_list_categories" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:layoutDirection="locale" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/testing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+        <RelativeLayout android:id="@id/rl_list_of_categories" android:background="@drawable/selector_list_categories" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layoutDirection="locale">
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_gravity="left" android:id="@id/ad_attribution" android:background="#ffffcc66" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ad" android:height="15.0dip" android:width="15.0dip" />
+            <com.facebook.ads.MediaView android:id="@id/native_icon_view" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="@color/live_text" android:ellipsize="end" android:gravity="top" android:id="@id/native_ad_title" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="20.0dip" android:maxLines="1" android:lines="1" android:singleLine="false" android:fontFamily="@string/font_family_regular" android:textDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="60.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/live_text" android:ellipsize="end" android:gravity="top" android:id="@id/native_ad_social_context" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="20.0dip" android:maxLines="1" android:lines="1" android:singleLine="false" android:fontFamily="@string/font_family_regular" android:textDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="60.0dip" />
+            </LinearLayout>
+            <ImageView android:id="@id/iv_foraward_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dip" android:src="@drawable/forward_arrow" android:layout_centerVertical="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+            <Button android:textSize="11.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/native_ad_call_to_action" android:background="#ff4286f4" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="50.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.facebook.ads.NativeAdLayout>

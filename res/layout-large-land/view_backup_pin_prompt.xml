@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rl_password_prompt" android:background="#de12161e" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="40.0dip" app:cardMaxElevation="10.0dip" app:cardUseCompatPadding="true">
+                <RelativeLayout android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/ll_expandable" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/tv_backup_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/set_pin" android:drawablePadding="7.0dip" android:layout_marginStart="25.0dip" app:drawableStartCompat="@drawable/parental_password_lock" />
+                        <ImageView android:id="@id/iv_div" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="15.0dip" android:layout_below="@id/tv_backup_pin" />
+                        <EditText android:textColorHint="@color/white" android:id="@id/et_pin" android:background="@drawable/selector_verify_password_fields" android:focusable="true" android:nextFocusDown="@id/bt_save_pin" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="10.0dip" android:hint="@string/enter_your_pin_1" android:layout_below="@id/iv_div" android:inputType="numberPassword" android:fontFamily="@string/font_family_regular" android:textDirection="locale" android:paddingStart="10.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+                            <requestFocus />
+                        </EditText>
+                        <TextView android:textSize="14.0sp" android:id="@id/tv_pin_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/et_pin" android:layout_marginStart="35.0dip" android:layout_marginEnd="35.0dip" />
+                        <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/bt_save_pin" android:tag="8" android:background="@drawable/black_button_dark" android:focusable="true" android:nextFocusRight="@id/bt_close" android:nextFocusUp="@id/et_pin" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:text="@string/set_ok" android:layout_below="@id/tv_pin_desc" android:layout_marginStart="40.0dip" />
+                        <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/bt_close" android:tag="9" android:background="@drawable/black_button_dark" android:focusable="true" android:nextFocusLeft="@id/bt_save_pin" android:nextFocusUp="@id/et_pin" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:text="@string/close" android:layout_below="@id/tv_pin_desc" android:layout_marginEnd="40.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

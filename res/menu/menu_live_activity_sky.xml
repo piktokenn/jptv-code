@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/home_icon_black" android:id="@id/nav_home" android:title="@string/menu_home" />
+    <item android:icon="@drawable/refresh_icon" android:id="@id/menu_load_channels_vod1" android:title="@string/load_channels_vod" />
+    <item android:icon="@drawable/guide_icon_menu" android:id="@id/menu_load_tv_guide1" android:visible="false" android:title="@string/load_tv_guide" />
+    <item android:icon="@drawable/sort" android:id="@id/menu_sort" android:title="@string/sort_optn" />
+    <item android:icon="@drawable/settings_icon_black" android:id="@id/nav_settings" android:title="@string/menu_settings" />
+</menu>

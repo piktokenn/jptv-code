@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/dashboard_background" android:scaleType="fitXY" />
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar_toolbar" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-10.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_toolbar" android:paddingTop="20.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="150.0dip" android:layout_height="42.0dip" android:src="@drawable/logo_white_long" />
+                <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:text="|" android:textDirection="locale" android:layout_toEndOf="@id/logo" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/live_sky" android:textDirection="locale" android:layout_marginStart="5.0dip" android:layout_toEndOf="@id/separator" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="50.0dip">
+                <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/toolbar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:minHeight="?actionBarSize" local:popupTheme="@style/ThemeOverlay.AppCompat.Light" xmlns:local="http://schemas.android.com/apk/res-auto">
+                    <RelativeLayout android:id="@id/rl_toolbar1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+                        <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:layout_marginStart="10.0dip" android:layout_marginEnd="15.0dip">
+                            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:textDirection="locale" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+                            <TextView android:textSize="14.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:textDirection="locale" android:paddingEnd="30.0sp" android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_layout_to_hide_1" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layoutDirection="locale" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_layout_to_hide_1" android:layoutDirection="locale">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_layout_to_hide_4" android:tag="2" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6" android:layoutDirection="locale" android:layout_marginStart="0.0sp">
+                <RelativeLayout android:id="@id/rl_episodes_box" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="2.0" android:layout_marginStart="25.0dip" android:layout_marginEnd="10.0dip">
+                        <LinearLayout android:id="@id/rl_left" android:background="@color/trasparent_light" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <RelativeLayout android:id="@id/rl_header_sidebar" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                        <LinearLayout android:orientation="horizontal" android:background="@color/trasparent_light_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="10.0">
+                                            <RelativeLayout android:id="@id/rl_search_cat" android:tag="11" android:background="@color/cat_search_background_live" android:focusable="true" android:nextFocusRight="@id/lv_ch_left_side" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                                                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                                    <ImageView android:layout_gravity="center" android:id="@id/iv_search_cat" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:src="@drawable/search_white" android:layout_marginStart="10.0dip" />
+                                                    <EditText android:textSize="14.0sp" android:textColor="@color/white" android:textColorHint="#ff918f8f" android:gravity="center_vertical" android:id="@id/et_search_left_side" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:hint="@string/search_in_categories" android:singleLine="true" android:layout_marginStart="5.0dip" />
+                                                </LinearLayout>
+                                            </RelativeLayout>
+                                        </LinearLayout>
+                                    </FrameLayout>
+                                </RelativeLayout>
+                                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_header_sidebar">
+                                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view_left_sidebar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@id/ll_category_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <ProgressBar android:theme="@style/whiteLoader" android:layout_gravity="center" android:id="@id/categories_progress" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminateOnly="true" android:indeterminateBehavior="repeat" />
+                                </LinearLayout>
+                                <LinearLayout android:id="@id/ll_no_cat_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_header_sidebar">
+                                    <TextView android:textColor="@color/white" android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:text="@string/no_cat_found" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout android:id="@id/rl_left_channel" android:background="@color/trasparent_light" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <ListView android:scrollbarThumbVertical="@drawable/scrollbar_list_view" android:scrollbarStyle="insideOverlay" android:id="@id/lv_ch_left_side" android:focusable="true" android:visibility="gone" android:nextFocusRight="@id/rl_nst_player_sky_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false" />
+                                </LinearLayout>
+                                <LinearLayout android:id="@id/ll_no_left_channel_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <TextView android:textColor="@color/white" android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:text="@string/no_channel_found" />
+                                </LinearLayout>
+                                <LinearLayout android:id="@id/ll_pb_left_channel_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <ProgressBar android:theme="@style/whiteLoader" android:id="@id/pb_left_channel_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="25.0dip" android:indeterminateOnly="true" android:indeterminateBehavior="repeat" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/catch_up" android:tag="3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_weight="0.4" android:layoutDirection="locale" android:layout_marginStart="0.0sp">
+                <RelativeLayout android:id="@id/rl_video_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" android:layoutDirection="locale">
+                    <RelativeLayout android:id="@id/rl_nst_player_sky_layout" android:background="@drawable/selector_checkbox" android:padding="4.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale" android:layout_toStartOf="@id/rl_layout_to_hide_6">
+                        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/exo_player_live_tv" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/rl_layout_to_hide_6" android:layout_width="20.0dip" android:layout_height="fill_parent" android:layoutDirection="locale" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rl_layout_to_hide_5" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" android:layoutDirection="locale" android:paddingStart="10.0dip" android:layout_marginEnd="10.0dip">
+                    <ScrollView android:id="@id/scrollView" android:background="@drawable/selector_checkbox" android:focusable="true" android:nextFocusDown="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="7.0dip" android:layoutDirection="locale">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+                                <LinearLayout android:orientation="vertical" android:id="@id/ll_epg1_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+                                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_epg1_date" android:tag="4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.4" android:layout_below="@id/on_demand" android:layoutDirection="locale" android:layout_marginStart="0.0sp" android:layout_toEndOf="@id/live_tv">
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/hp_cyan_light" android:gravity="center_vertical" android:id="@id/tv_epg1_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/hp_cyan_light" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="" android:textDirection="locale" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/hp_cyan_light" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/tv_epg1_program" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:textDirection="locale" android:layout_marginStart="10.0dip" />
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_epg1_desc" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                        <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_epg1_desc" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@id/ll_epg2_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layoutDirection="locale" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+                                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_epg2_date" android:tag="4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="1.0" android:layout_weight="0.4" android:layout_below="@id/on_demand" android:layoutDirection="locale" android:layout_marginStart="0.0sp" android:layout_toEndOf="@id/live_tv">
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tv_epg2_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/tv_epg2_program" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:textDirection="locale" android:layout_marginStart="10.0sp" />
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_epg2_desc" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                        <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_epg2_desc" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@id/ll_epg3_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layoutDirection="locale" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+                                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_epg3_date" android:tag="4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="1.0" android:layout_weight="0.4" android:layout_below="@id/on_demand" android:layoutDirection="locale" android:layout_marginStart="0.0sp" android:layout_toEndOf="@id/live_tv">
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tv_epg3_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/tv_epg3_program" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:textDirection="locale" android:layout_marginStart="10.0sp" />
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_epg3_desc" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                        <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_epg3_desc" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@id/ll_epg4_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layoutDirection="locale" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+                                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_epg4_date" android:tag="4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="1.0" android:layout_weight="0.4" android:layout_below="@id/on_demand" android:layoutDirection="locale" android:layout_marginStart="0.0sp" android:layout_toEndOf="@id/live_tv">
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tv_epg4_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textDirection="locale" />
+                                        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/tv_epg4_program" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:textDirection="locale" android:layout_marginStart="10.0sp" />
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_epg4_desc" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                        <TextView android:textSize="12.0sp" android:textColor="@color/white_trasparent" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_epg4_desc" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="2" android:textDirection="locale" android:layout_marginStart="5.0dip" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:id="@id/ll_no_guide" android:paddingTop="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale">
+                                <TextView android:textSize="14.0sp" android:textColor="@color/white_trasparent" android:gravity="center" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/tv_guide_info_downloading" />
+                            </LinearLayout>
+                            <LinearLayout android:id="@id/ll_epg_loader" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textDirection="locale">
+                                <ProgressBar android:theme="@style/blueLoader" android:layout_gravity="center" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:indeterminateOnly="true" android:indeterminateBehavior="repeat" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</FrameLayout>

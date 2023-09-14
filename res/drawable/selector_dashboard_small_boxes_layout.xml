@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_enabled="true" android:drawable="@drawable/shape_small_boxes_layout_focused" />
+    <item android:drawable="@color/trasparent_light_2" />
+</selector>

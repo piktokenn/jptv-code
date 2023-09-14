@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.formats.UnifiedNativeAdView android:id="@id/ad_view" android:background="@drawable/selector_list_categories" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:layoutDirection="locale" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingTop="3.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textStyle="bold" android:gravity="bottom" android:id="@id/ad_advertiser" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                        <RatingBar android:id="@id/ad_stars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="0.5" android:isIndicator="true" style="?android:ratingBarStyleSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:id="@id/ad_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_marginEnd="20.0dip" />
+                <com.google.android.gms.ads.formats.MediaView android:layout_gravity="center_horizontal" android:id="@id/ad_media" android:layout_width="250.0dip" android:layout_height="175.0dip" android:layout_marginTop="5.0dip" />
+                <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0sp" android:id="@id/ad_price" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip" />
+                    <TextView android:textSize="12.0sp" android:id="@id/ad_store" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip" />
+                    <Button android:textSize="12.0sp" android:gravity="center" android:id="@id/ad_call_to_action" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/testing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+        <RelativeLayout android:id="@id/rl_list_of_categories" android:background="@drawable/selector_list_categories" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layoutDirection="locale">
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_gravity="left" android:id="@id/ad_attribution" android:background="#ffffcc66" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ad" android:height="15.0dip" android:width="15.0dip" />
+            <ImageView android:id="@id/ad_icon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/tv_icon" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/live_text" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/ad_headline" android:layout_width="fill_parent" android:layout_height="60.0dip" android:maxLines="2" android:lines="2" android:singleLine="false" android:layout_centerVertical="true" android:fontFamily="@string/font_family_regular" android:textDirection="locale" android:layout_marginStart="50.0dip" android:layout_marginEnd="65.0dip" android:layout_toEndOf="@id/iv_tv_icon" />
+            <ImageView android:id="@id/iv_foraward_arrow" android:layout_width="wrap_content" android:layout_height="20.0dip" android:src="@drawable/forward_arrow" android:layout_centerVertical="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+            <TextView android:textColor="@color/live_text" android:id="@id/tv_sub_cat_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:textDirection="locale" android:layout_marginEnd="60.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.gms.ads.formats.UnifiedNativeAdView>

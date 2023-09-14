@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rl_category1" android:background="@drawable/selector_checkbox" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_category" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <TextView android:textSize="15.0dip" android:textColor="@color/white" android:id="@id/tv_category_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_centerVertical="true" android:fontFamily="@string/font_family_regular" android:layout_marginStart="20.0dip" android:layout_marginEnd="18.0dip" />
+        <ImageView android:id="@id/iv_lock_staus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/lock_open" android:layout_centerVertical="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/iv_divider" android:background="@color/service_status_terminated" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="8.0dip" android:layout_marginBottom="10.0dip" android:layout_below="@id/rl_category" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+</RelativeLayout>

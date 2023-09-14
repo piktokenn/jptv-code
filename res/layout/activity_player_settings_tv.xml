@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar_toolbar" android:background="@drawable/dashboard_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/toolbar" android:background="#ff343d46" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:minHeight="?actionBarSize" android:layout_centerInParent="true" local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="7.0dip" android:text="@string/account_info" android:layout_centerHorizontal="true" android:fontFamily="@string/font_family_bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout android:id="@id/rl_settings" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+            <ImageView android:id="@id/logo" android:focusable="false" android:layout_width="120.0dip" android:layout_height="45.0dip" android:src="@drawable/logo_white_long" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_toEndOf="@id/logo" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/settings_small" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/separator_second" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="|" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/textView" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/textView_second" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/playerSettings" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/separator_second" />
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/date" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffcccccc" android:gravity="center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:paddingEnd="30.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:background="#802a3543" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="55.0dip" android:layout_marginEnd="55.0dip">
+                    <RelativeLayout android:id="@id/rl_account_info" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="25.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/ijk_player_set" android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_account_info" android:layout_marginStart="25.0dip" android:layout_marginEnd="25.0dip">
+                        <RadioGroup android:id="@id/rg_radio" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <RadioButton android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/rb_native" android:tag="3" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/native_decoder" android:layout_marginStart="50.0dip" app:buttonTint="@color/white" />
+                            <RadioButton android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/rb_hardware_decoder" android:tag="4" android:padding="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hardware_decoder" android:layout_marginStart="50.0dip" app:buttonTint="@color/white" />
+                            <RadioButton android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/rb_software_decoder" android:tag="5" android:padding="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/software_decoder" android:layout_marginStart="50.0dip" app:buttonTint="@color/white" />
+                        </RadioGroup>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:background="#802a3543" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="55.0dip" android:layout_marginEnd="55.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:tag="6" android:padding="10.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/buffer_size_limit" android:layout_marginStart="75.0dip" app:buttonTint="@color/white" />
+                        <FrameLayout android:id="@id/fl_buffer_size_limit" android:background="@drawable/selector_tracks_layout" android:padding="7.0dip" android:focusable="true" android:layout_width="70.0sp" android:layout_height="fill_parent">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:layout_gravity="start|center" android:id="@id/tv_buffer_size_limit" android:tag="6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                            <ImageView android:layout_gravity="end|center" android:layout_width="15.0sp" android:layout_height="15.0sp" android:src="@drawable/hp_dropdown" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout android:background="#802a3543" android:paddingBottom="25.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="55.0dip" android:layout_marginEnd="55.0dip">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <CheckBox android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/cb_opensl_es" android:tag="6" android:padding="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enable_opensl_es" android:layout_marginStart="75.0dip" app:buttonTint="@color/white" />
+                            <CheckBox android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/cb_opengl" android:tag="7" android:padding="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:nextFocusDown="@id/bt_save_changes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enable_opengl" android:layout_marginStart="75.0dip" app:buttonTint="@color/white" />
+                            <CheckBox android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/cb_infbuf" android:tag="8" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/enable_infbuf" android:layout_marginStart="65.0dip" app:buttonTint="@color/white" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:weightSum="1.0" android:layout_marginStart="55.0dip" android:layout_marginEnd="55.0dip">
+                    <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/bt_save_changes" android:tag="1" android:background="@drawable/black_button_dark" android:focusable="true" android:focusableInTouchMode="true" android:nextFocusUp="@id/rb_mx_player" android:layout_width="0.0dip" android:layout_height="50.0sp" android:layout_margin="20.0dip" android:text="@string/save_changes" android:layout_weight="0.5">
+                        <requestFocus />
+                    </Button>
+                    <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/btn_back_playerselection" android:tag="2" android:background="@drawable/black_button_dark" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="50.0sp" android:layout_margin="20.0dip" android:text="@string/back_button" android:layout_weight="0.5">
+                        <requestFocus />
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>
