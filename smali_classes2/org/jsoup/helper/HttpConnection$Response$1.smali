@@ -29,9 +29,16 @@
 
 # virtual methods
 .method public verify(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z
+    # inserted by apk-mitm to disable certificate pinning
     .locals 1
-
     const/4 v0, 0x1
-
     return v0
+
+    # commented out by apk-mitm to disable old method body
+    #
+    # .locals 1
+    #
+    # const/4 v0, 0x1
+    #
+    # return v0
 .end method
